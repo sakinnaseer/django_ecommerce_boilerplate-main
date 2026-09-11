@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Belan Chronicle & Procrastination Monitor, Mummy</title>
+  <meta name="description" content="A humorous, interactive digital tribute to Desi Strict Moms featuring CYOA comics, a meme generator, the Strict-O-Meter quiz, and domestic relic lore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP TICKER BAR -->
+  <div class="top-ticker" id="top-ticker">
+    <div class="ticker-content">
+      <span class="ticker-badge">🚨 HOUSEHOLD NOTICE:</span>
+      <span class="ticker-text" id="ticker-text">Rule #402: "If you have a headache, it's the phone. If you failed math, it's the phone."</span>
+      <span class="ticker-sep">•</span>
+      <span>Live DEFCON Status: <strong>LEVEL 2 (Fan left on in empty bedroom)</strong></span>
+      <span class="ticker-sep">•</span>
+      <span>Sharma ji's son just finished revising whole syllabus twice today.</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav">
+    <div class="nav-wrap">
+      <a href="#hero" class="brand-logo" id="logo-link">
+        <span class="brand-icon">🩴</span>
+        <div class="brand-text">
+          <span class="brand-title">The Belan Chronicle</span>
+          <span class="brand-sub">Procrastination Monitor, Mummy • Est. Since 6:00 AM</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#roasts" class="nav-item">Case Files</a>
+        <a href="#comic-section" class="nav-item">CYOA Comic</a>
+        <a href="#meme-section" class="nav-item">Meme Studio</a>
+        <a href="#quiz-section" class="nav-item">Strict-O-Meter</a>
+        <a href="#relics-section" class="nav-item">Museum of Relics</a>
+        <a href="#community-section" class="nav-item">Mom's Corner</a>
+      </div>
+      <div class="nav-actions">
+        <button id="sfx-toggle" class="icon-btn" title="Toggle Desi Sound Effects" aria-label="Toggle Sound">
+          <span id="sfx-icon">🔊</span>
+          <span class="sfx-label">SFX: ON</span>
+        </button>
+        <button id="glossary-btn" class="pill-btn" aria-label="Desi Mom Glossary">
+          <span>📖 Desi Glossary</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-badge-row">
+        <span class="pill-tag"><span class="pulse-dot"></span> SURVEILLANCE ACTIVE • 24/7 HOUSEHOLD OBSERVATION</span>
+      </div>
+      <h1 class="hero-title">
+        "Beta, <span class="highlight-marigold">Mummy is watching</span> your screen time."
+      </h1>
+      <p class="hero-lead">
+        Every mindless scroll, every "just 5 more minutes I promise," every cold dinner—logged, audited, and compared unfavorably to Sharma Ji’s overachieving children. Welcome to the official survival headquarters.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#comic-section" class="btn btn-primary" id="hero-cta-comic">
+          <span>🎮 Survive The Goa Trip</span>
+          <span class="arrow-icon">→</span>
+        </a>
+        <a href="#quiz-section" class="btn btn-secondary" id="hero-cta-quiz">
+          <span>📊 Calculate Mom's Threat Level</span>
+        </a>
+        <a href="#meme-section" class="btn btn-outline" id="hero-cta-meme">
+          <span>🎨 Make A Meme</span>
+        </a>
+      </div>
+
+      <!-- LIVE STATS STRIP -->
+      <div class="stats-strip" id="stats-strip">
+        <div class="stat-card">
+          <div class="stat-val" id="stat-screen-time">2h 47m</div>
+          <div class="stat-lbl">Daily screen time unsupervised</div>
+          <div class="stat-sub">Mummy's tolerance limit: 0m</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">4</div>
+          <div class="stat-lbl">Apps currently under CBI investigation</div>
+          <div class="stat-sub">Instagram, LinkedIn, YouTube, Netflix</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val stat-green">99.8%</div>
+          <div class="stat-lbl">Sharma Ji's beta's board score</div>
+          <div class="stat-sub">He studies in his sleep apparently</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val stat-crimson">∞</div>
+          <div class="stat-lbl">Chappal threats pending</div>
+          <div class="stat-sub">Accuracy rate: 100% around corners</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: PROCRASTINATION MONITOR (CASE FILES) -->
+  <section class="section-roasts" id="roasts">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">CONFIDENTIAL SURVEILLANCE DOSSIER</span>
+        <h2 class="section-title">The Procrastination Monitor</h2>
+        <p class="section-desc">Mummy has audited your four favorite apps. Facts are sourced. The roasts are unadulterated truth. Nothing is private in this house.</p>
+      </div>
+
+      <!-- APP TABS -->
+      <div class="tab-bar-wrap">
+        <div class="tab-bar" role="tablist" aria-label="Social App Audits">
+          <button class="tab-btn active" role="tab" data-app="instagram" aria-selected="true" id="tab-instagram">
+            <span>📸 Instagram</span>
+          </button>
+          <button class="tab-btn" role="tab" data-app="linkedin" aria-selected="false" id="tab-linkedin">
+            <span>💼 LinkedIn</span>
+          </button>
+          <button class="tab-btn" role="tab" data-app="youtube" aria-selected="false" id="tab-youtube">
+            <span>▶️ YouTube</span>
+          </button>
+          <button class="tab-btn" role="tab" data-app="netflix" aria-selected="false" id="tab-netflix">
+            <span>🎬 Netflix</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB PANELS -->
+      <div class="tab-panels-container">
+
+        <!-- INSTAGRAM PANEL -->
+        <article class="app-panel active" data-panel="instagram" id="panel-instagram">
+          <div class="app-grid">
+            <div class="app-copy">
+              <div class="case-header">
+                <span class="case-badge marigold">CASE FILE #001</span>
+                <span class="case-status">STATUS: UNDER RED ALERT</span>
+              </div>
+              <h3 class="app-heading">Instagram: The reason dinner is cold and tea has formed a skin.</h3>
+              <p class="app-subheading">Primary Infraction: "Just checking one recipe Reel, Mummy" (45 minutes elapsed).</p>
+
+              <div class="quote-card">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">One reel, one reel she says. That was forty minutes ago. Is this what I sacrificed my youth for?</p>
+                <div class="quote-author">— Mummy, leaning silently against the bedroom doorframe</div>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-head">
+                  <span class="meter-name">🩴 Chappal Velocity Threat Level</span>
+                  <span class="meter-val crimson-text">CRITICAL (88%)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 88%; background: var(--crimson);"></div>
+                </div>
+              </div>
+
+              <div class="sharma-compare">
+                <span class="compare-icon">🏆</span>
+                <span><strong>Sharma Ji Ka Beta</strong> doesn't even have Instagram installed. He communicates solely through official academic notices.</span>
+              </div>
+
+              <div class="fact-card">
+                <div class="fact-badge">VERIFIED DIGITAL FACT</div>
+                <p>Reels now account for roughly <strong>46% of all time</strong> people spend on Instagram. You didn't even want to watch that stranger make miniature clay samosas, yet here we are.</p>
+                <span class="fact-src">Source: Platform Engagement Study 2026</span>
+              </div>
+            </div>
+
+            <!-- PARODY DEVICE MOCKUP -->
+            <div class="mock-device-wrapper">
+              <div class="report-stamp red-stamp">
+                <span class="grade-text">F</span>
+                <span class="grade-sub">CONCENTRATION</span>
+              </div>
+              <div class="ig-mock-card">
+                <div class="ig-top-bar">
+                  <div class="ig-avatar-ring"></div>
+                  <div class="ig-user-info">
+                    <span class="ig-username">your_batchmates_all_employed</span>
+                    <span class="ig-location">Somewhere doing productive things</span>
+                  </div>
+                  <span class="ig-dots">•••</span>
+                </div>
+                <div class="ig-grid-container">
+                  <div class="ig-tile tile-1"><span class="tile-hover-text">Photo Dump #47 (46 are identical)</span></div>
+                  <div class="ig-tile tile-2"><span class="tile-hover-text">Story that could have been a text</span></div>
+                  <div class="ig-tile tile-3"><span class="tile-hover-text">Friend pretending to be candid</span></div>
+                  <div class="ig-tile tile-4"><span class="tile-hover-text">Ad for protein powder you won't drink</span></div>
+                  <div class="ig-tile tile-5"><span class="tile-hover-text">Deep quote over coffee cup photo</span></div>
+                  <div class="ig-tile tile-6"><span class="tile-hover-text">Reel audio stuck in your head for 3 days</span></div>
+                </div>
+                <div class="ig-bottom-bar">
+                  <div class="ig-actions">❤️ 💬 ↗️</div>
+                  <p class="ig-caption"><strong>your_batchmates</strong> Living their best life while your phone battery is at 4% and charger is downstairs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LINKEDIN PANEL -->
+        <article class="app-panel" data-panel="linkedin" id="panel-linkedin">
+          <div class="app-grid">
+            <div class="app-copy">
+              <div class="case-header">
+                <span class="case-badge jade">CASE FILE #002</span>
+                <span class="case-status">STATUS: CONDITIONALLY PERMITTED</span>
+              </div>
+              <h3 class="app-heading">LinkedIn: The one app Mummy mistakes for actual studying.</h3>
+              <p class="app-subheading">Primary Defense: "I am networking for internships, Mummy."</p>
+
+              <div class="quote-card">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">At least the background looks blue and professional. Beta, why don't you also post something intelligent like this boy?</p>
+                <div class="quote-author">— Mummy, peering over glasses, surprisingly receptive</div>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-head">
+                  <span class="meter-name">🩴 Chappal Velocity Threat Level</span>
+                  <span class="meter-val jade-text">LOW (22%)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 22%; background: var(--jade);"></div>
+                </div>
+              </div>
+
+              <div class="sharma-compare">
+                <span class="compare-icon">💼</span>
+                <span><strong>Sharma Ji Ka Beta</strong> already has 500+ connections, 3 patents, and posted a viral story about what making morning chai taught him about B2B SaaS leadership.</span>
+              </div>
+
+              <div class="fact-card">
+                <div class="fact-badge">VERIFIED DIGITAL FACT</div>
+                <p>The average LinkedIn session runs approximately <strong>17 minutes</strong>—just enough time to read three humblebrags, feel behind on life, and shut the laptop in panic.</p>
+                <span class="fact-src">Source: Professional Network Analytics</span>
+              </div>
+            </div>
+
+            <!-- LINKEDIN MOCK -->
+            <div class="mock-device-wrapper">
+              <div class="report-stamp jade-stamp">
+                <span class="grade-text">B+</span>
+                <span class="grade-sub">EFFORT</span>
+              </div>
+              <div class="li-mock-card">
+                <div class="li-author">
+                  <div class="li-avatar"></div>
+                  <div>
+                    <div class="li-name">Ayush Sharma <span class="li-1st">• 1st</span></div>
+                    <div class="li-headline">Ex-Unpaid Intern | Disrupting Synergy | Thought Leader</div>
+                    <div class="li-time">1h • 🌐 Edited</div>
+                  </div>
+                </div>
+                <div class="li-content">
+                  <p>🚀 I am thrilled and humbled to announce that this morning, I drank water.</p>
+                  <p>Most people just swallow. But I paused. What did this hydration teach me about agile product delivery and market resilience?</p>
+                  <p>1. Water flows. Be agile.<br>2. Dehydration kills deals.<br>3. Always wake up at 4:30 AM like Sharma Ji's son.</p>
+                  <p class="li-tags">#Hustle #Grateful #ThoughtLeadership #B2BSaaS</p>
+                </div>
+                <div class="li-reactions-row">
+                  <span>👏 1,248</span>
+                  <span>💡 312</span>
+                  <span>❤️ 89</span>
+                </div>
+                <div class="li-comment-box">
+                  💬 <strong>Random Recruiter:</strong> "Great insights Ayush, truly moving!"
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- YOUTUBE PANEL -->
+        <article class="app-panel" data-panel="youtube" id="panel-youtube">
+          <div class="app-grid">
+            <div class="app-copy">
+              <div class="case-header">
+                <span class="case-badge gold">CASE FILE #003</span>
+                <span class="case-status">STATUS: HIGH SUSPICION OF FRAUD</span>
+              </div>
+              <h3 class="app-heading">YouTube: "It is educational lecture, Mummy" — A blatant perjury.</h3>
+              <p class="app-subheading">Defense Claim: "Watching IIT-JEE Physics revision."</p>
+
+              <div class="quote-card">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">Educational lecture you said. Then why is a man in America power-washing an abandoned swimming pool for 45 minutes?</p>
+                <div class="quote-author">— Mummy, catching the audio from three rooms away</div>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-head">
+                  <span class="meter-name">🩴 Chappal Velocity Threat Level</span>
+                  <span class="meter-val gold-text">ELEVATED (62%)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 62%; background: var(--gold);"></div>
+                </div>
+              </div>
+
+              <div class="sharma-compare">
+                <span class="compare-icon">🎓</span>
+                <span><strong>Sharma Ji Ka Beta</strong> only watches organic chemistry lectures at 2.5x speed with subtitles off while doing Surya Namaskar.</span>
+              </div>
+
+              <div class="fact-card">
+                <div class="fact-badge">VERIFIED DIGITAL FACT</div>
+                <p>Users spend an average of <strong>50 to 80 minutes daily</strong> on YouTube, with nearly 20% of viewing time lost to algorithm rabbit holes starting from "Quick math trick" to "Ancient Egyptian plumbing techniques."</p>
+                <span class="fact-src">Source: Global Video Trends Index</span>
+              </div>
+            </div>
+
+            <!-- YOUTUBE MOCK -->
+            <div class="mock-device-wrapper">
+              <div class="report-stamp gold-stamp">
+                <span class="grade-text">D-</span>
+                <span class="grade-sub">HONESTY</span>
+              </div>
+              <div class="yt-mock-card">
+                <div class="yt-screen">
+                  <div class="yt-video-title-overlay">WHY AM I WATCHING A MAN RESTORE AN 1890s RUSTY MEAT GRINDER AT 1:47 AM</div>
+                  <div class="yt-play-icon">▶</div>
+                  <div class="yt-ad-banner">
+                    <span>Ad • Skip in 5... 4... 3...</span>
+                    <span class="yt-ad-brand">Buy Samosa Air Fryer</span>
+                  </div>
+                </div>
+                <div class="yt-scrubber">
+                  <div class="yt-progress" style="width: 74%;"></div>
+                </div>
+                <div class="yt-details">
+                  <h4 class="yt-title">How To Stop Procrastinating (Watched While Procrastinating)</h4>
+                  <p class="yt-stats">4.2M views • 2 years ago • 84K comments saying "I'll watch this tomorrow"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- NETFLIX PANEL -->
+        <article class="app-panel" data-panel="netflix" id="panel-netflix">
+          <div class="app-grid">
+            <div class="app-copy">
+              <div class="case-header">
+                <span class="case-badge crimson">CASE FILE #004</span>
+                <span class="case-status">STATUS: MIDNIGHT CONSPIRACY</span>
+              </div>
+              <h3 class="app-heading">Netflix: Caught under the blanket with screen brightness on 1%.</h3>
+              <p class="app-subheading">Defense Claim: "I was just setting an alarm for morning study."</p>
+
+              <div class="quote-card">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">Tomorrow is your exam, and here you are investigating Spanish bank heists under your quilt. Do you think I don't see the blue light reflecting on the wall?</p>
+                <div class="quote-author">— Mummy, flicking the bedroom tube light ON with surgical precision</div>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-head">
+                  <span class="meter-name">🩴 Chappal Velocity Threat Level</span>
+                  <span class="meter-val crimson-text">MAXIMUM DEFCON 1 (94%)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 94%; background: var(--crimson);"></div>
+                </div>
+              </div>
+
+              <div class="sharma-compare">
+                <span class="compare-icon">😴</span>
+                <span><strong>Sharma Ji Ka Beta</strong> was sound asleep by 9:30 PM after reciting 100 Sanskrit shlokas and drinking warm turmeric milk.</span>
+              </div>
+
+              <div class="fact-card">
+                <div class="fact-badge">VERIFIED DIGITAL FACT</div>
+                <p>Viewers spend nearly <strong>18 continuous minutes</strong> just scrolling titles before selecting a show—often ending up falling asleep during the 15-minute preview.</p>
+                <span class="fact-src">Source: Streaming Behavior Analytics</span>
+              </div>
+            </div>
+
+            <!-- NETFLIX MOCK -->
+            <div class="mock-device-wrapper">
+              <div class="report-stamp red-stamp">
+                <span class="grade-text">F-</span>
+                <span class="grade-sub">SLEEP</span>
+              </div>
+              <div class="nf-mock-card">
+                <div class="nf-banner">MUMMY-FLIX ORIGINAL</div>
+                <h4 class="nf-prompt-title">Are you still watching...?</h4>
+                <p class="nf-prompt-desc">Because Mummy has been standing behind your pillow for approximately 4 minutes.</p>
+                <div class="nf-poster-row">
+                  <div class="nf-poster p1"><span>Failed Finals Ep 4</span></div>
+                  <div class="nf-poster p2"><span>Cold Dinner Season 2</span></div>
+                  <div class="nf-poster p3"><span>Disappointed Look</span></div>
+                </div>
+                <div class="nf-btn-row">
+                  <button class="nf-btn nf-btn-danger" onclick="alert('Mummy took your phone!')">Confess & Sleep</button>
+                  <button class="nf-btn nf-btn-dim">One More Episode</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CHOOSE-YOUR-OWN-ADVENTURE CARTOON STRIP -->
+  <section class="section-comic" id="comic-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">INTERACTIVE SURVIVAL SIMULATOR</span>
+        <h2 class="section-title">The Negotiation Table</h2>
+        <p class="section-desc">Can you obtain permission to go on a trip to Goa with your college friends? Every dialogue choice affects Mom’s Suspicion Meter.</p>
+      </div>
+
+      <div class="comic-stage" id="comic-stage">
+        <!-- COMIC STATUS BAR -->
+        <div class="comic-statusbar">
+          <div class="comic-status-item">
+            <span class="status-label">CURRENT SCENARIO:</span>
+            <span class="status-value" id="comic-scenario-title">Mission Goa Trip: The Living Room Interrogation</span>
+          </div>
+          <div class="comic-meter-wrap">
+            <span class="status-label">MUMMY'S SUSPICION:</span>
+            <div class="comic-meter-bar">
+              <div class="comic-meter-fill" id="comic-suspicion-fill" style="width: 25%;"></div>
+            </div>
+            <span class="comic-meter-num" id="comic-suspicion-val">25%</span>
+          </div>
+        </div>
+
+        <!-- COMIC MAIN DISPLAY -->
+        <div class="comic-card">
+          <div class="comic-visual-frame">
+            <!-- DYNAMIC CARTOON AVATAR / SCENE -->
+            <div class="comic-scene-art" id="comic-scene-art">
+              <div class="cartoon-mom" id="cartoon-mom">
+                <div class="mom-expression" id="mom-face">🤨</div>
+                <div class="mom-badge" id="mom-mood-badge">Mood: Skeptical</div>
+              </div>
+              <div class="cartoon-prop" id="cartoon-prop">🩴</div>
+            </div>
+            
+            <!-- DIALOGUE SPEECH BUBBLE -->
+            <div class="comic-speech-box">
+              <div class="speech-who" id="speech-who">MUMMY SPEAKS:</div>
+              <p class="speech-text" id="speech-text">
+                "Goa?! Why do you suddenly want to go to Goa? Who is going? Whose car? Who is paying? And why is your room looking so suspiciously tidy today?"
+              </p>
+              <div class="speech-sub-note" id="speech-sub-note">
+                💡 Tip: Never bring up Goa directly without offering ginger tea first.
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER CHOICE BUTTONS -->
+          <div class="comic-choices-container" id="comic-choices">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <!-- RESET / CONTROLS -->
+          <div class="comic-footer-bar">
+            <button class="pill-btn-sm" id="comic-restart-btn">🔄 Restart Scenario</button>
+            <button class="pill-btn-sm" id="comic-tupperware-btn">📦 Switch to "The Lost Tupperware Dabba" Case</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE AMMI-MATIC MEME & STICKER STUDIO -->
+  <section class="section-meme" id="meme-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">VIRAL DESI CONTENT LAB</span>
+        <h2 class="section-title">The "Ammi-Matic" Meme Studio</h2>
+        <p class="section-desc">Create your own customized Desi Mom roasts. Pick a cartoon template, customize the captions, drop iconic domestic stickers, and download ready-to-forward memes!</p>
+      </div>
+
+      <div class="meme-studio-grid">
+        <!-- CANVAS DISPLAY -->
+        <div class="meme-canvas-card">
+          <div class="canvas-wrapper">
+            <canvas id="memeCanvas" width="600" height="600"></canvas>
+          </div>
+          <div class="canvas-actions">
+            <button class="btn btn-primary" id="btn-download-meme">
+              <span>💾 Download Meme (PNG)</span>
+            </button>
+            <button class="btn btn-secondary" id="btn-copy-whatsapp">
+              <span>📲 Format for WhatsApp Forward</span>
+            </button>
+          </div>
+          <p class="canvas-hint">Pro Tip: Forward this directly to your family group for maximum household chaos.</p>
+        </div>
+
+        <!-- MEME CONTROLS -->
+        <div class="meme-controls-card">
+          <h3 class="controls-title">1. Choose Cartoon Template</h3>
+          <div class="template-selector" id="template-selector">
+            <button class="tmpl-btn active" data-tmpl="chappal">🩴 Flying Chappal Trajectory</button>
+            <button class="tmpl-btn" data-tmpl="belan">🪵 The Belan of Justice</button>
+            <button class="tmpl-btn" data-tmpl="phone">📱 Phone = Cause of All Disease</button>
+            <button class="tmpl-btn" data-tmpl="sharmaji">🏆 The Unreachable Sharma Ji Son</button>
+          </div>
+
+          <h3 class="controls-title">2. Customize Text</h3>
+          <div class="input-group">
+            <label for="meme-top-text">TOP CAPTION</label>
+            <input type="text" id="meme-top-text" value="ME: *HAS A SLIGHT COLD*">
+          </div>
+          <div class="input-group">
+            <label for="meme-bottom-text">MOM'S VERDICT (BOTTOM)</label>
+            <input type="text" id="meme-bottom-text" value="MOM: IT IS THAT 24-HOUR PHONE!">
+          </div>
+
+          <h3 class="controls-title">3. "Log Kya Kahenge" Dial-O-Meter</h3>
+          <div class="slider-group">
+            <div class="slider-head">
+              <span>Neighborhood Gossip Threat:</span>
+              <strong id="log-val">Level: Sharma Ji's Aunties (75%)</strong>
+            </div>
+            <input type="range" id="log-slider" min="0" max="100" value="75">
+          </div>
+
+          <h3 class="controls-title">4. Add Household Stickers</h3>
+          <div class="stickers-bar">
+            <button class="sticker-btn" data-sticker="🩴" title="Add Flying Slipper">🩴 Chappal</button>
+            <button class="sticker-btn" data-sticker="🪵" title="Add Rolling Pin">🪵 Belan</button>
+            <button class="sticker-btn" data-sticker="🍵" title="Add Haldi Doodh">🍵 Kadha</button>
+            <button class="sticker-btn" data-sticker="🥫" title="Add Royal Tupperware">🥫 Dabba</button>
+            <button class="sticker-btn" data-sticker="⚠️" title="Add High Alert">⚠️ Alert</button>
+          </div>
+
+          <button class="btn btn-outline full-width" id="btn-reset-meme" style="margin-top: 16px;">
+            Reset Canvas
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE STRICT-O-METER DIAGNOSTIC QUIZ -->
+  <section class="section-quiz" id="quiz-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">PARENTAL CLASSIFICATION SYSTEM</span>
+        <h2 class="section-title">The "Strict-O-Meter" Quiz</h2>
+        <p class="section-desc">Take our 6-question scientific diagnostic to determine where your mother ranks on the official Desi Parent Richter Scale.</p>
+      </div>
+
+      <div class="quiz-box-card" id="quiz-box">
+        <!-- QUIZ HEADER -->
+        <div class="quiz-progress-head">
+          <span class="quiz-step" id="quiz-step-label">Question 1 of 6</span>
+          <div class="quiz-bar-track">
+            <div class="quiz-bar-fill" id="quiz-bar-fill" style="width: 16.6%;"></div>
+          </div>
+          <span class="quiz-score-preview" id="quiz-score-preview">Score: 0 pts</span>
+        </div>
+
+        <!-- QUIZ QUESTION AREA -->
+        <div class="quiz-question-area" id="quiz-question-area">
+          <h3 class="quiz-question-title" id="quiz-q-title">Loading question...</h3>
+          <div class="quiz-options-list" id="quiz-options-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- REPORT CARD RESULT AREA (HIDDEN INITIALLY) -->
+        <div class="quiz-result-area" id="quiz-result-area" style="display: none;">
+          <div class="certificate-frame" id="certificate-frame">
+            <div class="cert-header">
+              <span class="cert-seal">🎖️</span>
+              <h4>OFFICIAL DESI MOM CLASSIFICATION REPORT</h4>
+              <p class="cert-sub">Issued by the Board of Domestic Audits & Belan Physics</p>
+            </div>
+
+            <div class="cert-body">
+              <div class="cert-rank-stamp" id="cert-rank-stamp">GRADE: A+</div>
+              <h3 class="cert-rank-title" id="cert-rank-title">Rank: Supreme Commander Ammi</h3>
+              <p class="cert-rank-desc" id="cert-rank-desc">
+                Your mom can calculate the exact trajectory of a rubber slipper around a 90-degree hallway bend. Empty Tupperware containers are treated as state emergencies.
+              </p>
+
+              <div class="cert-specs-grid">
+                <div class="spec-cell">
+                  <span class="spec-label">Time Dilation Factor:</span>
+                  <strong id="cert-time-spec">6:00 AM = "It's 11 AM"</strong>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Primary Cure-All:</span>
+                  <strong id="cert-cure-spec">Vicks Vaporub + Haldi Milk</strong>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Secret Affection Level:</span>
+                  <strong class="gold-text">100% Ghee Sliced Apples</strong>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Survival Probability:</span>
+                  <strong class="green-text">98.4% (With Good Grades)</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-footer">
+              <button class="btn btn-primary" id="btn-retake-quiz">Retake Assessment</button>
+              <button class="btn btn-secondary" onclick="alert('Report card copied to clipboard!')">Share Your Report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: MUSEUM OF DOMESTIC RELICS (CARTOON GALLERY) -->
+  <section class="section-relics" id="relics-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">SACRED HOUSEHOLD ARTIFACTS</span>
+        <h2 class="section-title">The Museum of Domestic Relics</h2>
+        <p class="section-desc">Click any sacred relic to inspect its tactical threat level, cultural lore, and defense strategies.</p>
+      </div>
+
+      <div class="relics-grid">
+        <!-- RELIC 1 -->
+        <div class="relic-card" data-relic="tupperware">
+          <div class="relic-art">🥫</div>
+          <span class="relic-threat high-threat">TREASON RATING: 10/10</span>
+          <h3 class="relic-name">The Blue Royal Tupperware</h3>
+          <p class="relic-desc">The sacred lunch container that you must return home with, even in the event of an apocalypse.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+
+        <!-- RELIC 2 -->
+        <div class="relic-card" data-relic="cookies">
+          <div class="relic-art">🧵</div>
+          <span class="relic-threat med-threat">DECEPTION LEVEL: 100%</span>
+          <h3 class="relic-name">The Danish Butter Cookie Tin</h3>
+          <p class="relic-desc">Contains zero Danish cookies. Houses 42 stray buttons, safety pins, and 3 miles of tangled white thread.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+
+        <!-- RELIC 3 -->
+        <div class="relic-card" data-relic="plasticbags">
+          <div class="relic-art">🛍️</div>
+          <span class="relic-threat low-threat">QUANTITY: INFINITE</span>
+          <h3 class="relic-name">The Plastic Bag of 400 Bags</h3>
+          <p class="relic-desc">Tucked under the kitchen sink. Carefully folded into triangles. It will outlast the collapse of modern society.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+
+        <!-- RELIC 4 -->
+        <div class="relic-card" data-relic="chappal">
+          <div class="relic-art">🩴</div>
+          <span class="relic-threat high-threat">RANGE: 40 METERS</span>
+          <h3 class="relic-name">The Aerodynamic Blue Slipper</h3>
+          <p class="relic-desc">Bata certified. Heat-seeking capabilities. Capable of ricocheting off the dining table to make contact.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+
+        <!-- RELIC 5 -->
+        <div class="relic-card" data-relic="sofaplastic">
+          <div class="relic-art">🛋️</div>
+          <span class="relic-threat med-threat">PRESERVATION: 12 YEARS</span>
+          <h3 class="relic-name">The Eternal Sofa Plastic Wrap</h3>
+          <p class="relic-desc">Kept untouched so the sofa remains pristine for the 'special royal guests' who have never once visited.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+
+        <!-- RELIC 6 -->
+        <div class="relic-card" data-relic="vicks">
+          <div class="relic-art">🧴</div>
+          <span class="relic-threat low-threat">CURE-ALL RATING: 100%</span>
+          <h3 class="relic-name">The Sacred Blue Tub of Vicks</h3>
+          <p class="relic-desc">Prescribed for headaches, heartbreaks, exam results, Wi-Fi issues, and sprained ankles alike.</p>
+          <button class="relic-btn">Inspect Relic & Lore →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MOM'S CORNER (COMMUNITY BOARD & TALES) -->
+  <section class="section-community" id="community-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-kicker">COMMUNITY ADALAT & HEARINGS</span>
+        <h2 class="section-title">Mom’s Corner: Tales from the Household</h2>
+        <p class="section-desc">Real stories submitted by survivors across the world. Upvote your favorite relatable moments or confess your own household crime!</p>
+      </div>
+
+      <div class="community-layout">
+        <!-- SUBMISSION FORM -->
+        <div class="submission-card">
+          <h3 class="sub-title">📝 Confess Your Household Incident</h3>
+          <p class="sub-hint">Did you lose a dabba? Did she catch you lying without GPS? Share it below!</p>
+          <form id="story-form">
+            <div class="input-group">
+              <label for="story-author">YOUR CODENAME</label>
+              <input type="text" id="story-author" placeholder="e.g. Scared Engineer, 23" required>
+            </div>
+            <div class="input-group">
+              <label for="story-category">CATEGORY</label>
+              <select id="story-category">
+                <option value="dabba">🥫 The Tupperware Tragedy</option>
+                <option value="detective">🕵️ FBI Level Mom Detection</option>
+                <option value="wake_up">⏰ The 6 AM Time Warp</option>
+                <option value="wholesome">🍎 Wholesome Sliced Apple Climax</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="story-content">THE INCIDENT</label>
+              <textarea id="story-content" rows="4" placeholder="Tell us what happened and what Mom said..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="btn-submit-story">
+              Submit to Mummy's Adalat
+            </button>
+          </form>
+        </div>
+
+        <!-- COMMUNITY STORIES FEED -->
+        <div class="stories-feed-wrap">
+          <div class="feed-filter-bar">
+            <span class="feed-count" id="feed-count">Showing 3 Community Cases</span>
+            <span class="feed-badge">VERIFIED RELATABLE</span>
+          </div>
+
+          <div class="stories-feed" id="stories-feed">
+            <!-- Dynamic Stories injected via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <span class="footer-icon">🩴</span>
+          <span class="footer-title">The Belan Chronicle</span>
+        </div>
+        <p class="footer-tagline">
+          A loving digital homage to Desi Mothers everywhere. Built with 100% pure ghee, infinite affection, and zero lost Tupperware.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-h">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#roasts">Procrastination Monitor</a></li>
+          <li><a href="#comic-section">CYOA Goa Comic</a></li>
+          <li><a href="#meme-section">Ammi-Matic Meme Lab</a></li>
+          <li><a href="#quiz-section">Strict-O-Meter Quiz</a></li>
+          <li><a href="#relics-section">Museum of Relics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-h">Household Safety</h4>
+        <p class="footer-meta">
+          Disclaimer: No actual rubber slippers were launched during the testing of this website. If your mom is currently knocking on your door, please close this tab and pretend you are revising organic chemistry immediately.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>© 2026 The Belan Chronicle • Handcrafted for Survivors of "5 More Minutes = 11:00 AM"</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: CULTURAL GLOSSARY FOR GLOBAL AUDIENCES -->
+  <div class="modal-backdrop" id="glossary-modal" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>📖 The Desi Mom Cultural Codex</h3>
+        <button class="modal-close" id="close-glossary">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="glossary-item">
+          <strong>Belan (बेलन):</strong> The traditional wooden Indian rolling pin. Primarily used for making round rotis; secondarily used as a scepter of domestic justice.
+        </div>
+        <div class="glossary-item">
+          <strong>Chappal (चप्पल):</strong> The legendary rubber slip-on slipper. Renowned for its aerodynamic precision and stealth velocity.
+        </div>
+        <div class="glossary-item">
+          <strong>Dabba (डब्बा):</strong> Any airtight plastic or steel container. Losing mom’s dabba outside the house is treated with the severity of an international diplomatic crisis.
+        </div>
+        <div class="glossary-item">
+          <strong>Sharma Ji Ka Beta:</strong> The mythical neighbor's son who wakes up at 4:00 AM, has won every gold medal on Earth, and exists solely to make you feel spiritually and academically inadequate.
+        </div>
+        <div class="glossary-item">
+          <strong>Haldi Doodh:</strong> Warm milk infused with turmeric. The ancient elixir prescribed for everything from physical injuries to mild emotional sadness.
+        </div>
+        <div class="glossary-item">
+          <strong>The Sliced Apple:</strong> The universal Desi mom gesture of reconciliation. She will never say "I'm sorry," but she will enter your room and silently place a plate of peeled, sliced apples on your study table.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: RELIC INSPECTOR -->
+  <div class="modal-backdrop" id="relic-modal" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="relic-modal-title">Relic Dossier</h3>
+        <button class="modal-close" id="close-relic">✕</button>
+      </div>
+      <div class="modal-body" id="relic-modal-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
